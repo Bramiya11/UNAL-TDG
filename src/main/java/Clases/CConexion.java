@@ -15,6 +15,7 @@ public class CConexion {
     
     String cadena = "jdbc:mysql://"+ip+":"+puerto+"/"+bd;
     
+    /////////////
     public Connection estableceConexion(){
         try{
             
