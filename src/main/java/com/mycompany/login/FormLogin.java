@@ -15,8 +15,8 @@ public class FormLogin extends javax.swing.JFrame {
      */
     public FormLogin() {
         initComponents();
-        
-        
+        this.setLocationRelativeTo(null);
+        this.setTitle("UNAL-TDG");
     }
 
     /**

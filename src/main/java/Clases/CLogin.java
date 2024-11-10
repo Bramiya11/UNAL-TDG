@@ -38,11 +38,11 @@ public class CLogin {
             rs = ps.executeQuery();
             
             if (rs.next()){
-                JOptionPane.showMessageDialog(null, "El usuario es correcto");
+                //JOptionPane.showMessageDialog(null, "El usuario es correcto");
                 FormMenuPrincipal objetoMenu = new FormMenuPrincipal();
                 objetoMenu.setVisible(true);
             }else{
-                JOptionPane.showMessageDialog(null, "Usuario incorrecto");
+                JOptionPane.showMessageDialog(null, "Usuario incorrecto. Vuelva a intentarlo.");
             }
             
             
