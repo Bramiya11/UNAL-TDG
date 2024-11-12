@@ -36,6 +36,11 @@ public class FormMenuPrincipal extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         RevisarAnexo.setText("Revisar Anexos");
+        RevisarAnexo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RevisarAnexoActionPerformed(evt);
+            }
+        });
 
         Guardar.setText("Guardar Cambios");
         Guardar.addActionListener(new java.awt.event.ActionListener() {
@@ -45,6 +50,11 @@ public class FormMenuPrincipal extends javax.swing.JFrame {
         });
 
         Cerrar.setText("Cerrar Sesión");
+        Cerrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CerrarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -75,7 +85,20 @@ public class FormMenuPrincipal extends javax.swing.JFrame {
 
     private void GuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GuardarActionPerformed
         // TODO add your handling code here:
+        Clases.SavingChanges paginaGuardar = new Clases.SavingChanges();
+        paginaGuardar.Change(1);
     }//GEN-LAST:event_GuardarActionPerformed
+
+    private void CerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CerrarActionPerformed
+        // TODO add your handling code here:
+        this.dispose();
+    }//GEN-LAST:event_CerrarActionPerformed
+
+    private void RevisarAnexoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RevisarAnexoActionPerformed
+        // TODO add your handling code here:
+        Clases.SeeTDG paginaLista = new Clases.SeeTDG();
+        paginaLista.lista();
+    }//GEN-LAST:event_RevisarAnexoActionPerformed
 
     /**
      * @param args the command line arguments
